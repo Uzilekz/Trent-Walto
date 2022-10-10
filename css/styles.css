@@ -1,0 +1,208 @@
+
+
+/* ---------- Fonts ---------- */
+@font-face {
+  font-family: "Lobster";
+  src: url(../fonts/Lobster-Regular.ttf);
+}
+@font-face {
+  font-family: "Bebas Neue";
+  src: url(../fonts/BebasNeue-Regular.ttf);
+}
+@font-face {
+  font-family: "Open Sans";
+  font-weight: lighter;
+  src: url(../fonts/OpenSans-Light.ttf);
+}
+@font-face {
+  font-family: "Open Sans";
+  src: url(../fonts/OpenSans-Regular.ttf);
+}
+@font-face {
+  font-family: "Open Sans";
+  font-weight: bold;
+  src: url(../fonts/OpenSans-Bold.ttf);
+}
+
+/* ---------- All --------- */
+body {
+  background: rgb(253, 253, 253);
+  font-family: "Open Sans", sans-serif;
+  font-weight: lighter;
+  color: #3a3a3a;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Bebas Neue";
+}
+
+a {
+  color: #EE4938;
+  text-decoration: none;
+  transition: color 0.2s ease-out;
+}
+
+a:hover {
+  color: #A8291C;
+  transition: color 0.1s ease-out;
+}
+
+.container--flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* ---------- Header --------- */
+.header {
+  margin-bottom: 80px;
+  padding: 20px;
+  
+  display: flex;
+  flex: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ---------- Header__Logo --------- */
+.header__logo {
+  background: #3a3a3a;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease-out;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header__logo:hover {
+  box-shadow: 0 0 5px #A8291C;
+  transition: box-shadow 0.3s ease-out;
+}
+
+.header__logo__link {
+  color: #fff;
+  font-family: "Lobster";
+  font-size: 2.8em;
+  transition: color 0.3s ease-out;
+}
+
+.header__logo__link:hover {
+  color: #f04532;
+  transition: color 0.3s ease-out;
+}
+
+/* ---------- Header__Nav --------- */
+.header__nav__link {
+  padding-right: 20px;
+  color: #3a3a3a;
+  font-weight: bold;
+  font-size: 0.9em;
+  transition: color 0.2s ease-out;
+}
+
+.header__nav__link:hover {
+  color: #EE4938;
+  transition: color 0.1s ease-out;
+}
+
+/* ---------- Main --------- */
+.container {
+  min-width: 250px;
+  margin: 0 auto;
+  width: 63%;
+}
+
+/* ---------- Footer --------- */
+.footer {
+  padding: 30px;
+  border-top: 1px solid rgba(146, 146, 146, 0.5);
+  font-weight: bold;
+  font-size: .9em;
+
+  display: flex;
+  flex: 100%;
+  justify-content: space-between;
+}
+
+.footer__contact {
+  display: flex;
+}
+
+.footer__contact__links {
+  margin-left: 30px;
+}
+
+.footer [class*="fa-"] {
+  color: rgb(191, 191, 191);
+}
+
+/* ---------- Responsive --------- */
+@media screen and (max-width: 1400px) {
+  .container {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .header__logo {
+    width: 60px;
+    height: 60px;
+  }
+  .header__logo__link {
+    font-size: 2.3em;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .header {
+    border-bottom: 1px solid rgba(146, 146, 146, 0.5);
+  }
+  .header__nav__link {
+    font-size: 1em;
+  }
+  .container {
+    width: 85%;
+  }
+  .footer {
+    font-size: 1em;
+
+    flex-direction: column;
+  }
+  .footer__contact {
+    flex-direction: column;
+  }
+  .footer__contact__links {
+    margin: 0;
+    margin-top: 15px;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .container {
+    width: 85%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .header {
+    flex-direction: column;
+    margin-bottom: 50px;
+  }
+  .header__logo {
+    width: 50px;
+    height: 50px;
+  }
+  .header__logo__link {
+    font-size: 1.9em;
+  }
+  .header__nav {
+    margin-top: 20px;
+  }
+  .header__nav__link {
+    padding: 0 5px;
+    font-size: 1em;
+  }
+}
